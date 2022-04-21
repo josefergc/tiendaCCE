@@ -37,6 +37,7 @@ if 'delete_all' in data:
 #ejecuta el borrado    
 mycol.delete_many(myquery)
 
+#Retorna resultada
 return {
     'statusCode': 200,
     'body': json.dumps('Ejecutado satisfactoriamente')
