@@ -5,16 +5,12 @@ Hay 2 bases de datos, una base relacional en MySQL con la información maestro d
 
 Los llamados disponibles son:
 
-## Crear o modificar artículos en el carrito
+### Crear o modificar artículos en el carrito
 La función crea un producto o lo edita en caso de ya haber sido adicionado al carrito con anterioridad. Antes de adicionar el producto al carrito se verifica que haya stock del producto. 
 
-**codigo:** createUpdateCart.py
+**codigo:** createUpdateCart.py      **url:** https://p4sp89boud.execute-api.us-east-1.amazonaws.com/alpha/cart
 
-**url:** https://p4sp89boud.execute-api.us-east-1.amazonaws.com/alpha/cart
-
-**Metodo:** POST
-
-**Header:** x-api-key => yWA656mi4c4LxVy5XUdbs3LHA9aaGBf53dxEAP9s
+**Metodo:** POST     **Header:** x-api-key => yWA656mi4c4LxVy5XUdbs3LHA9aaGBf53dxEAP9s
 
 **Payload:**
 {
@@ -25,7 +21,7 @@ La función crea un producto o lo edita en caso de ya haber sido adicionado al c
    "precio”: 2500
 }
 
-#### Traer Productos del carrito
+## Traer Productos del carrito
 La función recibe el usuario y devuelve los artículos que el usuario dispone en su carrito.
 
 **codigo:** getCart.py
