@@ -4,6 +4,7 @@ El API Gateway accede a lambda function donde están implementados en lenguaje P
 Hay 2 bases de datos, una base relacional en MySQL con la información maestro de los productos y una base de datos NoSQL en Mongo para guardar la información del carrito.
 
 Los llamados disponibles son:
+-------------
 
 ### Listar los productos
 Devuelve los productos disponibles con paginación. Si no se envia paginación envia los primeros 100 productos.
@@ -24,7 +25,7 @@ num_productos (cuantos productos se despliegan por página)
 https://p4sp89boud.execute-api.us-east-1.amazonaws.com/alpha/catalog?pagina=3&num_productos=3
 
 
-----
+-------------
 
 
 ### Crear o modificar artículos en el carrito
@@ -43,7 +44,7 @@ La función crea un producto o lo edita en caso de ya haber sido adicionado al c
    "precio”: 2500
 }
 
-----
+-------------
 
 ### Traer Productos del carrito
 La función recibe el usuario y devuelve los artículos que el usuario dispone en su carrito.
@@ -60,7 +61,7 @@ user_id (identificador del usuario)
 
 https://p4sp89boud.execute-api.us-east-1.amazonaws.com/alpha/cart?user_id=399
 
-----
+-------------
 
 ### Eliminar artículos en el carrito
 La función elimina un producto del carrito o permite eliminar todos los productos del carrito con la opción“delete_all" con el valor "true".
@@ -76,7 +77,7 @@ La función elimina un producto del carrito o permite eliminar todos los product
    "delete_all": “true”
 }
 
-----
+-------------
 
 ## Diseño
 Todas las llamadas son recibidas por el API Gateway, que permite recibir un gran volumen de llamadas simultaneas, ademas permite manejar autenticación y autorización a los recursos.
