@@ -66,7 +66,9 @@ https://p4sp89boud.execute-api.us-east-1.amazonaws.com/alpha/cart?user_id=399
 La función elimina un producto del carrito o permite eliminar todos los productos del carrito con la opción“delete_all" con el valor "true".
 
 **codigo:**deleteCart.py  **url:** https://p4sp89boud.execute-api.us-east-1.amazonaws.com/alpha/cart
+
 **Metodo:** DELETE   **Header:** x-api-key=> yWA656mi4c4LxVy5XUdbs3LHA9aaGBf53dxEAP9s
+
 **Payload:**
 {
    "user_id": 300,
@@ -74,6 +76,7 @@ La función elimina un producto del carrito o permite eliminar todos los product
    "delete_all": “true”
 }
 
+------------
 
 ## Diseño
 Todas las llamadas son recibidas por el API Gateway, que permite recibir un gran volumen de llamadas simultaneas, ademas permite manejar autenticación y autorización a los recursos.
