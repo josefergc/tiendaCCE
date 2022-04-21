@@ -5,6 +5,22 @@ Hay 2 bases de datos, una base relacional en MySQL con la información maestro d
 
 Los llamados disponibles son:
 
+### Listar los productos
+Devuelve los productos disponibles con paginación. Si no se envia paginación envia los primeros 100 productos.
+
+**codigo:**getProducts.py   **url:** https://p4sp89boud.execute-api.us-east-1.amazonaws.com/alpha/catalog
+**Metodo:** GET   **Header:**   x-api-key => yWA656mi4c4LxVy5XUdbs3LHA9aaGBf53dxEAP9s
+**QueryStringParameters**:
+
+pagina (Pagina que desea desplegar la primera es la 0)
+
+num_productos (cuantos productos se despliegan por pagina)
+
+**Ejemplo**
+
+https://p4sp89boud.execute-api.us-east-1.amazonaws.com/alpha/catalog?pagina=3&num_productos=3
+
+
 ### Crear o modificar artículos en el carrito
 La función crea un producto o lo edita en caso de ya haber sido adicionado al carrito con anterioridad. Antes de adicionar el producto al carrito se verifica que haya stock del producto. 
 
@@ -21,47 +37,30 @@ La función crea un producto o lo edita en caso de ya haber sido adicionado al c
    "precio”: 2500
 }
 
-## Traer Productos del carrito
+### Traer Productos del carrito
 La función recibe el usuario y devuelve los artículos que el usuario dispone en su carrito.
 
-**codigo:** getCart.py
-**url:** https://p4sp89boud.execute-api.us-east-1.amazonaws.com/alpha/cart
-**Metodo:** GET
-**Header:** x-api-key => yWA656mi4c4LxVy5XUdbs3LHA9aaGBf53dxEAP9s
-**QueryStringParameters**: user_id (identificador del usuario)
+**codigo:** getCart.py   **url:** https://p4sp89boud.execute-api.us-east-1.amazonaws.com/alpha/cart
+**Metodo:** GET       **Header:** x-api-key => yWA656mi4c4LxVy5XUdbs3LHA9aaGBf53dxEAP9s
+**QueryStringParameters**: 
+
+user_id (identificador del usuario)
+
 **Ejemplo**
 
 https://p4sp89boud.execute-api.us-east-1.amazonaws.com/alpha/cart?user_id=399
 
-#### Eliminar artículos en el carrito
+### Eliminar artículos en el carrito
 La función elimina un producto del carrito o permite eliminar todos los productos del carrito con la opción“delete_all" con el valor "true".
 
-**codigo:**deleteCart.py
-**url:** https://p4sp89boud.execute-api.us-east-1.amazonaws.com/alpha/cart
-**Metodo:** DELETE
-**Header:** x-api-key=> yWA656mi4c4LxVy5XUdbs3LHA9aaGBf53dxEAP9s
+**codigo:**deleteCart.py  **url:** https://p4sp89boud.execute-api.us-east-1.amazonaws.com/alpha/cart
+**Metodo:** DELETE   **Header:** x-api-key=> yWA656mi4c4LxVy5XUdbs3LHA9aaGBf53dxEAP9s
 **Payload:**
 {
    "user_id": 300,
    "product_id": 20,
    "delete_all": “true”
 }
-
-
-#### Listar los productos
-Devuelve los productos disponibles con paginación. Si no se envia paginación envia los primeros 100 productos.
-
-**codigo:**getProducts.py
-**url:** https://p4sp89boud.execute-api.us-east-1.amazonaws.com/alpha/catalog
-**Metodo:** GET
-**Header:** x-api-key => yWA656mi4c4LxVy5XUdbs3LHA9aaGBf53dxEAP9s
-**QueryStringParameters**: 
-pagina (Pagina que desea desplegar la primera es la 0)
-num_productos (cuantos productos se despliegan por pagina)
-
-**Ejemplo**
-
-https://p4sp89boud.execute-api.us-east-1.amazonaws.com/alpha/catalog?pagina=3&num_productos=3
 
 
 ## Diseño
