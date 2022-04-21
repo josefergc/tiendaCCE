@@ -26,6 +26,7 @@ myresult = cursor.fetchall()
 dictItems = {}
 item = 0
 
+#Cambia formato del producto a JSON
 for product in myresult:
     item+=1
     dictItems["product_"+str(item)] = {"product_id":int(product[0]),"name":product[1],"image":product[2], "precio":float(product[3])}
