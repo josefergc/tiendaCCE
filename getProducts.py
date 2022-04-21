@@ -22,10 +22,10 @@ if page != '0':
 cursor.execute("SELECT ID,Nombre,Imagen,Precio FROM productos WHERE ACTIVO = 1 LIMIT "+ limite + " OFFSET " + page + ";")
 myresult = cursor.fetchall()
 
-
+#variable para crear el resultado (listado de productos)
 dictItems = {}
 item = 0
-#show each product
+
 for product in myresult:
     item+=1
     dictItems["product_"+str(item)] = {"product_id":int(product[0]),"name":product[1],"image":product[2], "precio":float(product[3])}
