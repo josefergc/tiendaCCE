@@ -25,6 +25,7 @@ https://p4sp89boud.execute-api.us-east-1.amazonaws.com/alpha/catalog?pagina=3&nu
 
 
 
+
 ### Crear o modificar artículos en el carrito
 La función crea un producto o lo edita en caso de ya haber sido adicionado al carrito con anterioridad. Antes de adicionar el producto al carrito se verifica que haya stock del producto. 
 
@@ -42,11 +43,14 @@ La función crea un producto o lo edita en caso de ya haber sido adicionado al c
 }
 
 
+
 ### Traer Productos del carrito
 La función recibe el usuario y devuelve los artículos que el usuario dispone en su carrito.
 
 **codigo:** getCart.py   **url:** https://p4sp89boud.execute-api.us-east-1.amazonaws.com/alpha/cart
+
 **Metodo:** GET       **Header:** x-api-key => yWA656mi4c4LxVy5XUdbs3LHA9aaGBf53dxEAP9s
+
 **QueryStringParameters**: 
 
 user_id (identificador del usuario)
