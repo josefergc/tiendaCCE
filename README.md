@@ -1,10 +1,11 @@
+#API - Tienda
 El API esta configurado en API Gateway de AWS, el cual permite grandes volúmenes de llamadas a sus servicios y al ser tecnología ServerLess, permite un escalamiento rápido.
 El API Gateway accede a lambda function donde están implementados en lenguaje Python.
 Hay 2 bases de datos, una base relacional en MySQL con la información maestro de los productos y una base de datos NoSQL en Mongo para guardar la información del carrito.
 
 Los llamados disponibles son:
 
-####Crear o modificar artículos en el carrito
+##Crear o modificar artículos en el carrito
 La función crea un producto o lo edita en caso de ya haber sido adicionado al carrito con anterioridad. Antes de adicionar el producto al carrito se verifica que haya stock del producto. 
 
 **codigo:** createUpdateCart.py
