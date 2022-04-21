@@ -8,7 +8,7 @@ Los llamados disponibles son:
 ### Listar los productos
 Devuelve los productos disponibles con paginación. Si no se envia paginación envia los primeros 100 productos.
 
-**codigo:**getProducts.py   **url:** https://p4sp89boud.execute-api.us-east-1.amazonaws.com/alpha/catalog
+**codigo:**   getProducts.py        **url:** https://p4sp89boud.execute-api.us-east-1.amazonaws.com/alpha/catalog
 **Metodo:** GET   **Header:**   x-api-key => yWA656mi4c4LxVy5XUdbs3LHA9aaGBf53dxEAP9s
 **QueryStringParameters**:
 
