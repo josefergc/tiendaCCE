@@ -1,11 +1,11 @@
-#API - Tienda
+# API - Tienda
 El API esta configurado en API Gateway de AWS, el cual permite grandes volúmenes de llamadas a sus servicios y al ser tecnología ServerLess, permite un escalamiento rápido.
 El API Gateway accede a lambda function donde están implementados en lenguaje Python.
 Hay 2 bases de datos, una base relacional en MySQL con la información maestro de los productos y una base de datos NoSQL en Mongo para guardar la información del carrito.
 
 Los llamados disponibles son:
 
-##Crear o modificar artículos en el carrito
+## Crear o modificar artículos en el carrito
 La función crea un producto o lo edita en caso de ya haber sido adicionado al carrito con anterioridad. Antes de adicionar el producto al carrito se verifica que haya stock del producto. 
 
 **codigo:** createUpdateCart.py
@@ -21,7 +21,7 @@ La función crea un producto o lo edita en caso de ya haber sido adicionado al c
    "precio”: 2500
 }
 
-####Traer Productos del carrito
+#### Traer Productos del carrito
 La función recibe el usuario y devuelve los artículos que el usuario dispone en su carrito.
 
 **codigo:** getCart.py
@@ -33,7 +33,7 @@ La función recibe el usuario y devuelve los artículos que el usuario dispone e
 
 https://p4sp89boud.execute-api.us-east-1.amazonaws.com/alpha/cart?user_id=399
 
-####Eliminar artículos en el carrito
+#### Eliminar artículos en el carrito
 La función elimina un producto del carrito o permite eliminar todos los productos del carrito con la opción“delete_all" con el valor "true".
 
 **codigo:**deleteCart.py
@@ -48,7 +48,7 @@ La función elimina un producto del carrito o permite eliminar todos los product
 }
 
 
-####Listar los productos
+#### Listar los productos
 Devuelve los productos disponibles con paginación. Si no se envia paginación envia los primeros 100 productos.
 
 **codigo:**getProducts.py
@@ -64,7 +64,7 @@ num_productos (cuantos productos se despliegan por pagina)
 https://p4sp89boud.execute-api.us-east-1.amazonaws.com/alpha/catalog?pagina=3&num_productos=3
 
 
-##Diseño
+## Diseño
 Todas las llamadas son recibidas por el API Gateway, que permite recibir un gran volumen de llamadas simultaneas, ademas permite manejar autenticación y autorización a los recursos.
 Para que la solución se creo un API Key pero se recomienda que el API solo sea accesible a traves de los roles internos de AWS.
 Los lambda function manejan API Secret de este modo los usuarios y sus respectivos passwords de la base de datos relacional y de la BD NoSQL no estan quemados en el codifgo.
@@ -103,7 +103,7 @@ INSERT INTO productos VALUES (130, "Producto 13", "Descripcion producto 13", "ht
 ```
 
 
-###Pruebas Unitarias
+### Pruebas Unitarias
 
 Se ejecutan las pruebas unitarias en el archivo testpruebas.py con resultado satisfactorio.
 
