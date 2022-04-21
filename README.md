@@ -9,9 +9,13 @@ Los llamados disponibles son:
 La función crea un producto o lo edita en caso de ya haber sido adicionado al carrito con anterioridad. Antes de adicionar el producto al carrito se verifica que haya stock del producto. 
 
 **codigo:** createUpdateCart.py
+
 **url:** https://p4sp89boud.execute-api.us-east-1.amazonaws.com/alpha/cart
+
 **Metodo:** POST
+
 **Header:** x-api-key => yWA656mi4c4LxVy5XUdbs3LHA9aaGBf53dxEAP9s
+
 **Payload:**
 {
    "user_id": 300,
