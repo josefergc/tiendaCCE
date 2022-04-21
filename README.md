@@ -24,6 +24,7 @@ num_productos (cuantos productos se despliegan por página)
 https://p4sp89boud.execute-api.us-east-1.amazonaws.com/alpha/catalog?pagina=3&num_productos=3
 
 
+------------
 
 
 ### Crear o modificar artículos en el carrito
@@ -42,7 +43,7 @@ La función crea un producto o lo edita en caso de ya haber sido adicionado al c
    "precio”: 2500
 }
 
-
+------------
 
 ### Traer Productos del carrito
 La función recibe el usuario y devuelve los artículos que el usuario dispone en su carrito.
@@ -59,6 +60,7 @@ user_id (identificador del usuario)
 
 https://p4sp89boud.execute-api.us-east-1.amazonaws.com/alpha/cart?user_id=399
 
+------------
 
 ### Eliminar artículos en el carrito
 La función elimina un producto del carrito o permite eliminar todos los productos del carrito con la opción“delete_all" con el valor "true".
