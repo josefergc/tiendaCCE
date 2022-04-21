@@ -66,7 +66,7 @@ https://p4sp89boud.execute-api.us-east-1.amazonaws.com/alpha/cart?user_id=399
 ### Eliminar artículos en el carrito
 La función elimina un producto del carrito o permite eliminar todos los productos del carrito con la opción“delete_all" con el valor "true".
 
-**codigo:**deleteCart.py  **url:** https://p4sp89boud.execute-api.us-east-1.amazonaws.com/alpha/cart
+**codigo:**   deleteCart.py  **url:** https://p4sp89boud.execute-api.us-east-1.amazonaws.com/alpha/cart
 
 **Metodo:** DELETE   **Header:** x-api-key=> yWA656mi4c4LxVy5XUdbs3LHA9aaGBf53dxEAP9s
 
